@@ -25,6 +25,10 @@ Your Answer: "The function gets locked into its initial memory slot on the very 
 
 Q2: "Should we wrap every single function in a component with useCallback?"
 Your Answer: "No, we shouldn't. Optimization isn't free—useCallback has to run dependency checks on every single render, which adds a small overhead. We should only use it when passing functions to optimized child components or when a function is a dependency in another hook like useEffect."
+
+useCallback is PASSIVE (Caches a function definition): It doesn't run your code. Its only job is to freeze a function's memory reference across re-renders to save memory.
+
+useEffect is ACTIVE (Executes side-effects): Its job is to run code—like fetching data from an API database or setting up timers—automatically after the UI renders on the screen.
 */
 
 export default function SimpleCallbackDemo() {

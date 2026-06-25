@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import UseCallback from './useCallback'
 import UseRef from "./UseRef"
+import UseParams from './UseParams'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +13,8 @@ function App() {
   return (
     <>
      {/* <UseCallback /> */}
-     <UseRef />
+     {/* <UseRef /> */}
+     <UseParams />
     </>
   )
 }
